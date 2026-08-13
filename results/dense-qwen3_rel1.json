@@ -1,0 +1,33 @@
+{
+  "retriever": "dense-qwen3",
+  "relevant_at": 1,
+  "dataset": {
+    "label_rows": 233448,
+    "unique_pairs": 231873,
+    "duplicate_pairs_agreeing": 1559,
+    "duplicate_pairs_conflicting": 16,
+    "products": 42994,
+    "queries": 480
+  },
+  "index_stats": {
+    "docs_indexed": 42994,
+    "embed_seconds": 221.94514600001276,
+    "db_load_seconds": 10.122596083005192,
+    "hnsw_build_seconds": 38.19214912499592,
+    "index_seconds": 270.25989120801387,
+    "index_size_mb": 564.1328125
+  },
+  "ef_search": 100,
+  "latency_ms": {
+    "p50": 23.32,
+    "p95": 28.42
+  },
+  "metrics": {
+    "ndcg@10": 0.5919,
+    "precision@10": 0.7075,
+    "recall@100": 0.3066,
+    "recall@10": 0.0477
+  },
+  "n_scored": 479,
+  "n_skipped": 1
+}

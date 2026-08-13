@@ -88,3 +88,29 @@ def evaluate(
         "n_scored": float(len(ndcg)),
         "n_skipped": float(skipped),
     }
+
+
+def per_query_scores(
+    results: dict[int, list[int]],
+    relevant_by_query: dict[int, set[int]],
+    grades_by_query: dict[int, dict[int, int]],
+    k: int = 10,
+) -> dict[str, dict[int, float]]:
+    """Per-query metrics, keyed metric -> query_id -> score.
+
+    Needed for the paired significance test: comparing two macro-averages tells
+    you nothing about whether the difference survives a different query sample.
+    """
+    ndcg: dict[int, float] = {}
+    prec: dict[int, float] = {}
+    rec100: dict[int, float] = {}
+
+    for qid, retrieved in results.items():
+        relevant = relevant_by_query.get(qid, set())
+        if not relevant:
+            continue
+        ndcg[qid] = ndcg_at_k(retrieved, grades_by_query.get(qid, {}), k)
+        prec[qid] = precision_at_k(retrieved, relevant, k)
+        rec100[qid] = recall_at_k(retrieved, relevant, 100)
+
+    return {f"ndcg@{k}": ndcg, f"precision@{k}": prec, "recall@100": rec100}

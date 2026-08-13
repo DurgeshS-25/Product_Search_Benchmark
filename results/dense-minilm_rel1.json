@@ -1,0 +1,33 @@
+{
+  "retriever": "dense-minilm",
+  "relevant_at": 1,
+  "dataset": {
+    "label_rows": 233448,
+    "unique_pairs": 231873,
+    "duplicate_pairs_agreeing": 1559,
+    "duplicate_pairs_conflicting": 16,
+    "products": 42994,
+    "queries": 480
+  },
+  "index_stats": {
+    "docs_indexed": 42994,
+    "embed_seconds": 11.47617816599086,
+    "db_load_seconds": 4.39548391700373,
+    "hnsw_build_seconds": 4.1467778329970315,
+    "index_seconds": 20.01843991599162,
+    "index_size_mb": 151.921875
+  },
+  "ef_search": 100,
+  "latency_ms": {
+    "p50": 13.79,
+    "p95": 18.97
+  },
+  "metrics": {
+    "ndcg@10": 0.5921,
+    "precision@10": 0.7163,
+    "recall@100": 0.3069,
+    "recall@10": 0.048
+  },
+  "n_scored": 479,
+  "n_skipped": 1
+}

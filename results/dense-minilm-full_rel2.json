@@ -1,0 +1,36 @@
+{
+  "retriever": "dense-minilm-full",
+  "relevant_at": 2,
+  "dataset": {
+    "label_rows": 233448,
+    "unique_pairs": 231873,
+    "duplicate_pairs_agreeing": 1559,
+    "duplicate_pairs_conflicting": 16,
+    "products": 42994,
+    "queries": 480
+  },
+  "index_stats": {
+    "docs_indexed": 42994,
+    "docs_truncated": 1396,
+    "embed_seconds": 33.1440863339958,
+    "db_load_seconds": 4.516156915997271,
+    "hnsw_build_seconds": 5.059081041006721,
+    "index_seconds": 42.71932429099979,
+    "index_size_mb": 152.3984375
+  },
+  "ef_search": 100,
+  "text_config": "full",
+  "query_prefix": "",
+  "latency_ms": {
+    "p50": 15.14,
+    "p95": 19.34
+  },
+  "metrics": {
+    "ndcg@10": 0.6439,
+    "precision@10": 0.4166,
+    "recall@100": 0.5476,
+    "recall@10": 0.2338
+  },
+  "n_scored": 379,
+  "n_skipped": 101
+}

@@ -1,0 +1,26 @@
+{
+  "retriever": "dense-minilm",
+  "relevant_at": 2,
+  "dataset": {
+    "label_rows": 233448,
+    "unique_pairs": 231873,
+    "duplicate_pairs_agreeing": 1559,
+    "duplicate_pairs_conflicting": 16,
+    "products": 42994,
+    "queries": 480
+  },
+  "index_stats": {},
+  "ef_search": 100,
+  "latency_ms": {
+    "p50": 12.97,
+    "p95": 18.43
+  },
+  "metrics": {
+    "ndcg@10": 0.5954,
+    "precision@10": 0.3752,
+    "recall@100": 0.5041,
+    "recall@10": 0.2002
+  },
+  "n_scored": 379,
+  "n_skipped": 101
+}

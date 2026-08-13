@@ -1,0 +1,26 @@
+{
+  "retriever": "dense-qwen3",
+  "relevant_at": 2,
+  "dataset": {
+    "label_rows": 233448,
+    "unique_pairs": 231873,
+    "duplicate_pairs_agreeing": 1559,
+    "duplicate_pairs_conflicting": 16,
+    "products": 42994,
+    "queries": 480
+  },
+  "index_stats": {},
+  "ef_search": 100,
+  "latency_ms": {
+    "p50": 22.86,
+    "p95": 28.37
+  },
+  "metrics": {
+    "ndcg@10": 0.5994,
+    "precision@10": 0.3805,
+    "recall@100": 0.494,
+    "recall@10": 0.1996
+  },
+  "n_scored": 379,
+  "n_skipped": 101
+}
