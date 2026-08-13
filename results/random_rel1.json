@@ -1,0 +1,25 @@
+{
+  "retriever": "random",
+  "relevant_at": 1,
+  "dataset": {
+    "label_rows": 233448,
+    "unique_pairs": 231873,
+    "duplicate_pairs_agreeing": 1559,
+    "duplicate_pairs_conflicting": 16,
+    "products": 42994,
+    "queries": 480
+  },
+  "index_stats": {},
+  "latency_ms": {
+    "p50": 0.01,
+    "p95": 0.01
+  },
+  "metrics": {
+    "ndcg@10": 0.0058,
+    "precision@10": 0.0092,
+    "recall@100": 0.0028,
+    "recall@10": 0.0004
+  },
+  "n_scored": 479,
+  "n_skipped": 1
+}
